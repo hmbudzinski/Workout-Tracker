@@ -1,39 +1,54 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ExampleSchema = new Schema({
-    string: {
+const CardioSchema = new Schema({
+    Name: {
         type: String,
         trim: true,
         required: "String is Required"
     },
 
-    number: {
+    Distance: {
         type: Number,
-        unique: true,
         required: true
     },
 
-    email: {
-        type: String,
-        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-    },
-
-    boolean: Boolean,
-
-    array: Array,
-
-    date: {
-        type: Date,
-        default: Date.now
-    },
-
-    longstring: {
-        type: String,
-        validate: [({ length }) => length >= 6, "Longstring should be longer."]
+    Duration: {
+        type: Number,
+        required: true
     }
 });
 
-const Example = mongoose.model("Example", ExampleSchema);
+const ResistanceSchema = new Schema({
+    ExerciseName: {
+        type: String,
+        trim: true,
+        required: "String is Required"
+    },
 
-module.exports = Example;
+    Weight: {
+        type: Number,
+        required: true
+    },
+
+    Sets: {
+        type: Number,
+        required: true
+    },
+
+    Reps: {
+        type: Number,
+        required: true
+    },
+
+    Duration: {
+        type: Number,
+        required: true
+    }
+});
+
+const Cardio = mongoose.model("Cardio", CardioSchema);
+const Resistance = mongoose.model("Resistance", ResistanceSchema);
+
+module.exports = Cardio;
+module.exports = Resistance;
