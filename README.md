@@ -1,51 +1,21 @@
-# Workout-Tracker# Unit 17 Nosql Homework: Workout Tracker
+## Employee Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+# What
 
-## User Story
+The objective of this assignment was to create an employee tracker so a manager can track who is on their team, what their roles are, what their salaries are, and other useful information. The manager can select what they would like to do; view their employees, add an employee, or remove an employee. From that selection the user is then prompted input some information regarding their employee and the table is updated.
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
-+
-## Business Context
+# Why
 
-A consumer will reach their fitness goals quicker when they track their workout progress.
+This was our first exposure to MySql and manipulating data in the tables and database.
 
-## Acceptance Criteria
+# How
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+I first created my database and seeds so I could have some data in the table to view and manipulate. Then I set up my initial prompt that asks the user what they would like to do. The first call I made to the database was the view all function as that is the most straight forward. The second call I got was the remove function, and then the add employee function last.
 
-The user should be able to:
+# Features
 
-  * Add exercises to a previous workout plan.
+Managers can add, remove, and view all of their employees and their roles from my app.
 
-  * Add new exercises to a new workout plan.
+# Difficultes
 
-  * View multiple the combined weight of multiple exercises on the `stats` page.
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the Github repository
+For some reason the add employee function was the hardest for me, it took me quite a while to work out the moving parts on this one. In the future I would like to be able to add more functions such as updating the employees role, viewing all employees by the department, and updating employees salaries.
